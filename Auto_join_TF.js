@@ -94,7 +94,8 @@ async function autoPost(ID, ids) {
     let header = {
         'X-Session-Id': $persistentStore.read('session_id'),
         'X-Session-Digest': $persistentStore.read('session_digest'),
-        'X-Request-Id': $persistentStore.read('request_id')
+        'X-Request-Id': $persistentStore.read('request_id'),
+        'User-Agent': "Oasis/3.5.1 OasisBuild/425.2 iOS/17.5 model/iPhone16,2 hwp/t8130 build/21F79 (6; dt:311) AMS/1 TSE/0"
     };
 
     return new Promise((resolve) => {
